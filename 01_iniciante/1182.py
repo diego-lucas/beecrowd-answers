@@ -1,17 +1,16 @@
 L = int(input())
 T = input()
-matrix = []
 
+sum = 0
 for i in range(12):
-    row = []
     for j in range(12):
         n = float(input())
-        row.append(n)
-    matrix.append(row)
+        if j == L:
+            sum += n
 
 if T == "S":
-    result = sum(matrix[L])
+    result = sum
 else:
-    result = sum(matrix[L]) / 12
+    result = sum / 12
 
 print(f"{result:.1f}")
